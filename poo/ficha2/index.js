@@ -4,7 +4,12 @@ function funcA()
     let array
     for(let i=0;i<num;i++)
     {
-        array[i]=parseInt(prompt("insira um elemento do array"))
+        let valor=(prompt("insira um elemento do array"))
+        valor=valor+valor
     }
+let media=valor/num
+    // Apresentação dos resultados
+    let myTextArea = document.querySelector("#txtResults")
+    myTextArea.innerHTML = media
     
 }

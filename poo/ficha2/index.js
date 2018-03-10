@@ -91,5 +91,140 @@ myTextArea.innerHTML = string_reversed
 }
 function funcG()
 {
+    let strings=["Vermelho", "Verde", "Branco", "Preto"]
+    let maior=0
+    let maior_string=""
+    for(let i=0;i<strings.length;i++)
+    {
+        if(maior<strings[i].length)
+        {
+            maior=strings[i].length
+            maior_string=strings[i]
+        }
+    }
+    //apresentação do resultado
+    let myTextArea = document.querySelector("#txtResults")
+    myTextArea.innerHTML =maior_string
+
+}
+function funcH()
+{
+    let strings=["Vermelho", "Verde", "Verde", "Branco", "Preto"]
+    let Verde="Verde"
+    let contador=0
+    for(let i=0;i<strings.length;i++)
+    {
+        if(Verde==strings[i])
+        {
+            contador++
+        }
+    }
+     //apresentação do resultado
+     let myTextArea = document.querySelector("#txtResults")
+     myTextArea.innerHTML =contador
+}
+function funcI()
+{
+   //array password e confirmação
+   let  password=[]
+   let result=null
+   for(let i=0;i<2;i++)
+   {
+       if(i==0)
+       {
+       password[i]=prompt("Insira a sua password")
+       }
+       if(i==1)
+       {
+           password[i]=prompt("Insira agora a confirmação")
+       }
+   }
+   if(password[0]!=password[1])
+   {
+    result=0
+   }
+   else
+   {
+       result=1
+   }
+    //apresentação do resultado
+    let myTextArea = document.querySelector("#txtResults")
+    myTextArea.innerHTML =result
+}
+function funcJ()
+{
+    let strings=["Vermelho", "Verde", "Verde", "Branco", "Preto"]
+    let valor=3
     
+     //apresentação do resultado
+     let myTextArea = document.querySelector("#txtResults")
+     myTextArea.innerHTML =strings[valor]
+
+
+}
+function funcK()
+{
+ //pedir valor
+ let valor=prompt("Insira um valor numerico:")
+ let valores_positivos=[]
+ for (let i=0;i<valor;i++)
+ {
+   valores_positivos[i]=i+1
+ }
+ //apresentação do resultado
+ let myTextArea = document.querySelector("#txtResults")
+ myTextArea.innerHTML =valores_positivos
+}
+function funcL()
+{
+    let array=[]
+    let novo_array=[]
+    //pedir o numero de elementos do array
+    let elem=parseInt(prompt("Insira o numero de elementos:"))
+    //pedir os elementos do array(Com pelo menos um negativo para depois se retirar)
+    for(let i=0;i<elem;i++)
+    {
+      array[i]=parseInt(prompt("Insira um elemento do array"))
+    }
+    for(let i=0;i<elem;i++)
+    {
+        if(array[i]<0)
+        {
+            array.splice(i,1)
+        }  
+    }
+     //apresentação do resultado
+     let myTextArea = document.querySelector("#txtResults")
+     myTextArea.innerHTML =array
+    
+}
+function funcM()
+{
+
+}
+function funcN()
+{
+    //array1
+    let array1=[1,0,2,3,4]
+    //array2
+    let array2=[3,5,6,7,8,13]
+    //obtem se o lenght do maior array
+    array2.length
+    //ve se a diferença entre os dois 
+    let diferença =array2.length-array1.length
+    //adicionar ao array menor zeros para ter o mesmo numero de elewmentos
+    for(let i=0;i<diferença;i++)
+    {
+        array1.push(0);
+    }
+    //arraysoma
+    let array_soma=[]
+    for(let i=0;i<array2.length;i++)
+    {
+     array_soma[i]=array1[i]+array2[i]
+    }
+    //apresentação do resultado
+    let myTextArea = document.querySelector("#txtResults")
+    myTextArea.innerHTML =array_soma
+
 }

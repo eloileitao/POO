@@ -168,6 +168,17 @@ function funcN()
     {
         console.log("NAO")
     }
+    /* 
+        
+        let num   
+        num = prompt("Escreva um número")        
+        if (num.charAt(0) == num.charAt(2) ) {
+        console.log("SIM")
+        } else {
+        console.log("NÃO")
+        }        
+        
+        */
     
 }
 function funcO()

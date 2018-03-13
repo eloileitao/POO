@@ -78,16 +78,16 @@ function funcF()
     let string=prompt("Insira a string:")
     //pedir o caracter
     let carater=prompt("Insira o caracter a remover:")
+    //tamanho da string
+    let comp=string.length
     //remover o carater
-    for(let i=0;i<string.length;i++)
-    {
-        if(string[i]==carater)
-        {
-             string=string.substr(0,i-1)+string.substr(i+1,string.length-1)
-             i-1
-        }
-    }
+  
+     string=string.replace((new RegExp(carater,"g")),"")
     //Imprimir os resultados
    let myTextArea = document.querySelector("#txtResults")
    myTextArea.innerHTML =string
+}
+function funcE()
+{
+    
 }

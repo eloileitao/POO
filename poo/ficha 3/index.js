@@ -87,7 +87,28 @@ function funcF()
    let myTextArea = document.querySelector("#txtResults")
    myTextArea.innerHTML =string
 }
-function funcE()
+function funcG()
 {
+    let horas=0
+    let minutos=0
+    let segundos=0
+    //pedir segundos
+   let segundos_dados =parseInt(prompt("Insira os segundos:"))
+   //
+   if (segundos_dados >= 3600)
+      { horas = segundos_dados / 3600 }
+   if (segundos_dados - 3600 * horas >= 60)
+      { minutos = (segundos_dados - 3600 * horas) / 60 }
+   if (segundos_dados - 3600 * horas - 60 * minutos > 0)
+      { segundos = (segundos_dados - 3600 * horas - 60 * minutos) }
+      //resposta
+      let resp= horas+":"+minutos+":"+segundos
+       //Imprimir os resultados
+   let myTextArea = document.querySelector("#txtResults")
+   myTextArea.innerHTML =resp
     
+}
+function funcH()
+{
+
 }

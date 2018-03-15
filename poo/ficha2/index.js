@@ -200,6 +200,18 @@ function funcL()
 }
 function funcM()
 {
+    //array
+    let um=[7, 3, 6, 2, 5]
+    let dois=[]
+    //novo array
+    for(let i=0;i<um.length;i++)
+    {
+    dois.push(um[i]+1)
+    }
+    //apresentação do resultado
+    let myTextArea = document.querySelector("#txtResults")
+    myTextArea.innerHTML =dois
+
 
 }
 function funcN()

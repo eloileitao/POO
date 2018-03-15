@@ -110,5 +110,43 @@ function funcG()
 }
 function funcH()
 {
+    //defenir array abecedario
+    let abecedario=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    //pedir palavra
+    let palavra=prompt("Insira a palavra:")
+    //passar a plavra para letra grande
+    palavra=palavra.toUpperCase()
+    let resultado=""
+    for(let i=0;i<palavra.length;i++)
+    {
+        for(let j=0;j<abecedario.length;j++)
+        {
+           if(palavra[i]==abecedario[j])
+           {
+               if(j==26)
+               {
+                   resultado=resultado+abecedario[2]
+               }
+               if(j==25)
+               {
+                   resultado=resultado+abecedario[1]
+               }
+               if(j==24)
+               {
+                   resultado=resultado+abecedario[0]
+               }
+               else
+               {
+                   resultado=resultado+abecedario[j+3]
+               }
+           } 
+        }
+    }
+    //meter em pequeno
+   resultado=resultado.toLowerCase()
+     //Imprimir os resultados
+   let myTextArea = document.querySelector("#txtResults")
+   myTextArea.innerHTML = resultado
+
 
 }

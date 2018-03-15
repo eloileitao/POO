@@ -204,24 +204,42 @@ function funcM()
 }
 function funcN()
 {
+    let maior
+    let menor
+    let menor_array=[]
+    let maior_array=[]
     //array1
     let array1=[1,0,2,3,4]
     //array2
     let array2=[3,5,6,7,8,13]
     //obtem se o lenght do maior array
-    array2.length
+    if(array1.length>array2.length)
+    {
+    maior=array1.length
+    menor=array2.length
+    maior_array=array1
+    menor_array=array2
+    }
+    else
+    {
+        maior=array2.length
+        menor=array1.length
+        menor_array=array1
+        maior_array=array2
+    }
     //ve se a diferença entre os dois 
-    let diferença =array2.length-array1.length
+
+    let diferença =maior-menor
     //adicionar ao array menor zeros para ter o mesmo numero de elewmentos
     for(let i=0;i<diferença;i++)
     {
-        array1.push(0);
+        menor_array.push(0);
     }
     //arraysoma
     let array_soma=[]
     for(let i=0;i<array2.length;i++)
     {
-     array_soma[i]=array1[i]+array2[i]
+     array_soma[i]=menor_array[i]+maior_array[i]
     }
     //apresentação do resultado
     let myTextArea = document.querySelector("#txtResults")

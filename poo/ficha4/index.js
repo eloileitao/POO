@@ -144,6 +144,18 @@ function funcC()
     {
       car1.cor=nova_cor
     }
+    function litros()
+    {
+        let novos_litros=51/100*120
+        if(novos_litros<car2.dep_atual)
+        {
+            car2.dep_atual=car2.dep_atual-novos_litros
+        }
+        if(novos_litros>=car2.dep_atual)
+        {
+            car2.dep_atual=0
+        }
+    }
     //criação de dois objetos 
     let car1= new car("Ford","91-GH-15","Verde",40,"Gasoleo")
     let car2=new car("Opel","23-AB-23","branco",50,"Gasolina")
@@ -164,6 +176,21 @@ function funcC()
     }
     
     show("\n"+"ii)"+"\n"+txt2)
+    //escolher um carro e receber o numero de kilometros percorridos(carro:car2 numkilometros:120km)
+    let kilometros=120
+    //invocar função
+    litros()
+    //imprimir resultados
+    let txt3="car2"+"\n"
+    for(let i in car2)
+    {
+        txt3+= i+" "+car2[i]+"\n"
+    }
+    
+    show("\n"+"iii)"+"\n"+txt3)
+
+
+
 }
 function funcD()
  {

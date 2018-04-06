@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ex2 ficha 7</title>
+    <script src="ex2.js"></script>
+</head>
+<body>
+    <form action="" id="frmRegisto">
+        Nome:<input id="txtNome" type="text" maxlength="50"  autofocus>
+        <br>
+        <br>
+        Morada:<input id="txtMorada" type="text" >
+        <br>
+        <br>
+        Codigo Postal:<input type="number" maxlength="4"minlength"4">-<input type="number"max="999"maxlength="3"minlength"3">
+        <br>
+        <br>
+        Telemovel:<input type="number" max="999999999" min="900000000" >
+        <br>
+        <br>
+        Data de Nascimento:<input type="date" max="2018-04-04">
+        <br>
+        <br>
+        Localidade: <select>
+            <option value="Penamaior">Penamaior</option>
+            <option value="Meixomil">Meixomil</option>
+            <option value="Freamunde">Freamunde</option>
+            <option value="Frazao">Frazao</option>
+
+        </select>
+        <br>
+        <br>
+        Sexo: <input type="radio" name="gender" value="M" checked>M
+              <input type="radio" name="gender" value="F">F
+        <br>
+        <br>
+        E-mail:<input type="email" >
+        <br>
+        <br>
+        Credênciais:
+        <br>
+        Nome de Utilizador:<input type="text" placeholder="Username" >
+        Password:<input type="password" id="password1"placeholder="Password" required>
+        Confirmar Password:<input type="password"id="password2"placeholder="as chaves devem coincidir"required>
+        <br>
+        Tamanho da camisola:
+        <select>
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+
+        </select>
+        <br>
+        <br>
+        URL Pagina Pessoal:<input type="URL">
+        <br>
+        <br>
+        Numero da sapatilha: <input type="number" min="30" max="50">
+        <br>
+        <br>
+        <textarea rows="10" cols="30" placeholder="Observações"></textarea>
+        <br>
+        <br>
+        <input type="submit"id="butao_submeter" value="Registar">
+
+
+
+    </form>
+</body>
+</html>

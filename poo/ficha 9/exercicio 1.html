@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Personalidades.smash</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!---Documento js-->
+    <script src="exercio 1.js"></script>
+</head>
+  <body>
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <div class="jumbotron">
+        <h1 class="display-3">Personalidades</h1>
+        <p class="lead">Formulario</p>
+        <hr class="my-2">
+
+        <!--Formulario-->
+
+        <form id="perso.form">
+            <div class="form-row">
+                <!--Nome-->
+                 <div class="form-group col-md-6">
+                   <label for="Nome.txt">Nome</label>
+                   <input type="text" name="" id="Nome.txt" class="form-control" placeholder="" aria-describedby="helpId" required autofocus>
+                 <!--Data de nascimento-->  
+                 </div>
+                 <div class="form-group col-md-4">
+                   <label for="Data.txt">Data de Nascimento</label>
+                   <input type="date" class="form-control" name="" id="Data.txt" aria-describedby="helpId" placeholder=""  required>
+                  <!--Nacionalidade-->
+                 </div>
+                 <div class="form-group col-md-2">
+                   <label for="Nacionalidade.txt">Nacionalidade</label>
+                   <select class="form-control" name="" id="Nacionalidade.txt" required>
+                     <option>Europa</option>
+                     <option>America</option>
+                     <option>Africa</option>
+                     <option>Asia</option>
+                     <option></option>
+                   </select>
+                 </div>
+              
+            </div>
+            <div class="form-row">
+                <!--Principal Obra-->
+                <div class="form-group col-md-6">
+                  <label for="Obra.txt">Principal Obra</label>
+                  <input type="text" name="" id="Obra.txt" class="form-control" placeholder="" aria-describedby="helpId"required>
+                  <small id="helpId" class="text-muted">Help text</small>
+                </div>
+                <!--Link-->
+               <div class="form-group col-md-4">
+                 <label for="foto.txt">Link da foto</label>
+                 <input type="url" class="form-control" name="" id="foto.txt" aria-describedby="helpId" placeholder="" required>
+                 <small id="helpId" class="form-text text-muted">Help text</small>
+               </div>
+           </div>
+           <div class="form-row">
+               <!--Butões-->
+               <div class="form-group col-md-12">
+               <button type="submit" class="btn btn-success">Submit</button>
+                <button type="reset" class="btn btn-primary">Clear</button>
+            </div>
+            </div>
+          </form>
+
+          <table id="tblPerso" class="table"style="width:100%"></table> 
+    </div>
+
+   
+ </body>
+</html>

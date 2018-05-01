@@ -66,7 +66,7 @@ function init()
   //adicionar um ouvinte de eventos ao form quando acontece o sbmite
   persoForm.addEventListener("submit",function(event){
   //verificar a data 
-
+  dataVerificar()
   //caso a validação esteja cumprida criamos o objeto:
   let novaPerso=new Personalidades(nomeTxt.value,dataTxt.value,nacionalidadeTxt.value,obraTxt.value,fotoTxt.value)
   //Adicionar o objeto ao array:
@@ -96,4 +96,21 @@ function atualizaTabela() {
         str +="</tr>"
     }
     str += "</tbody>"
-    tblPerso.innerHTML = str}
+    tblPerso.innerHTML = str
+ // Obtem todos os <td> da tabela (coluna com o ícone de remoção)
+ let tdRemove = document.getElementsByClassName("remove")
+ // Para cada um deles adiciona um listener para o evento clique
+ for (let i = 0; i < tdRemove.length; i++) {
+     tdRemove[i].addEventListener("click", function() {
+         // Ao clicar num determinado filme, remove-o do array
+         personalidades.splice(i, 1)
+         // Atualiza de novo a tabela
+         atualizaTabela()
+     })        
+ }}
+ //verificar data
+ function dataVerificar(){
+    let str=dataTxt.value
+    var date = new Date(str.split('/').reverse().join('/'));
+    var novaData = new Date();
+    if(date > novaData) alert("A data de nascimento tem de ser inferior a de hoje");}

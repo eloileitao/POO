@@ -84,6 +84,10 @@ function init()
     let tblGames = document.getElementById("tblGames")
     let btnRemoveAll = document.getElementById("btnRemoveAll")
     let btnFilter = document.getElementById("btnFilter")
+    let nomeFiltro=document.getElementById("nomeFiltro")
+    let generoFiltro=document.getElementById("generoFiltro")
+    let urlFiltro=document.getElementById("urlFiltro")
+    let btnFiltro=document.getElementById("btnFiltro")
    
 
    //Butao submit
@@ -157,14 +161,18 @@ function init()
     })
 
     // Adicionar um listener para o butao "Filtrar por genero"
-     btnFilter.addEventListener("click", function() {        
-        renderTable(genderGame.value)
+     btnFiltro.addEventListener("click", function() {        
+        renderTable(generoFiltro.value,nomeFiltro.value,urlFiltro.value)
+        generoFiltro.value=""
+        nomeFiltro.value=""
+        urlFiltro.value=""
+
     })
 
     //Funções para autalizar a tabela, editar, ver e remover
 
     // Função para atualizar os objetos da tabela
-function renderTable(genero = "") {
+function renderTable(genero = "", nome="", capa="") {
     
     let strHtml = "<thead class='thead-dark'><tr>" +
     "<th class='w-2'>#</th>" +
@@ -176,7 +184,7 @@ function renderTable(genero = "") {
     "</thead><tbody>"
 
     for (var i = 0; i < jogos.length; i++) {
-        if (genero==jogos[i].genero || genero=="") {
+        if ((genero==jogos[i].genero || genero=="")&&(nome==jogos[i].nome || nome=="")&&(capa==jogos[i].capa || capa=="")) {
             strHtml += "<tr>" +
             "<td>" + jogos[i].id + "</td>" +
             "<td>" + jogos[i].nome + "</td>" +

@@ -80,7 +80,7 @@
                 <div class="form-group">
                  <button type="submit"  class="btn btn-success">Submeter</button>
                  <button type="reset" class="btn btn-primary">Clear</button>
-                 <button id="btnFilter" type="button" class="btn btn-primary ">Filtrar por genero</button>
+                 <button id="btnFilter" type="button" class="btn btn-primary " data-toggle="modal" data-target="#filtroModal">Filtrar por :</button>
                  <button id="btnRemoveAll" type="button" class="btn btn-primary ">Remover tudo</button>
 
                 </div>
@@ -97,7 +97,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Game Details</h5>
+              <h5 class="modal-title">Detalhes do Jogo</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -126,7 +126,46 @@
       </div>
     </div>
 
+<!-- Modal filtro -->
+<div class="modal fade" id="filtroModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Filtrar por:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <div class="form-group">
+           <label for="nomeFiltro">Nome</label>
+           <input type="text" value="" name="" id="nomeFiltro" aria-describedby="helpId" placeholder="Nome">
+           
+         </div>
+         <div class="form-group">
+            <label for="generoFiltro">Genero</label>
+            <input type="text" value=""  name="" id="generoFiltro" aria-describedby="helpId" placeholder="Genero">
+            
+          </div>
+          <div class="form-group">
+            <label for="nomeFiltro">Capa</label>
+            <input type="url" value="" name="" id="urlFiltro" aria-describedby="helpId" placeholder="Url da capa">
+            
+          </div>
+            
+            
 
+
+            
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="btnFiltro">Filtrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body>
 </html>

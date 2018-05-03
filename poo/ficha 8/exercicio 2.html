@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Game Platform</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!--Documento JavaScript-->
+    <!-- Bootstrap CSS -->
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-slN8GvtUJGnv6ca26v8EzVaR9DC58QEwsIk9q1QXdCU8Yu8ck/tL/5szYlBbqmS+" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <!--Documento js-->
+    <script src="exercicio 2.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+
+    <!--Jumbotron-->
+    <div class="jumbotron">
+        <h1 class="display-3">Games Platform</h1>
+        <p class="lead">Preencha os seguintes campos</p>
+        <hr class="my-2">
+        <!--formulario-->
+        <form id="formGames">
+            <!--primeira linha que ira ter o nome e o genero-->
+            <div class="form-row">
+                <!--Nome-->
+               <div class="form-group col-md-6">
+                 <label for="nameGame">Nome</label>
+                 <input type="text" class="form-control" name="" id="nameGame" aria-describedby="helpId" placeholder="" required>
+                 
+               </div>
+               <!--Genero-->
+               <div class="form-group col-md-4">
+                 <label for="genderGame">Genero</label>
+                 <select class="form-control" name="" id="genderGame">
+                   <option>Aventura</option>
+                   <option>Ação</option>
+                   <option>Terror</option>
+                   <option>FPS</option>
+                   <option>Multiplayer</option>
+                 </select>
+               </div>
+            </div>
+            <!--Segunda Linha ira ter as plataformas-->
+            <div class="form-row">
+                <!--Plataformas-->
+                <div class="form-check form-check-inline col-md-6" >
+                    <label class="form-check-label">
+                        <input class="form-check-input ml-3" type="checkbox" name="" id="" value="PS4" > PS4
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input ml-3" type="checkbox" name="" id="" value="Xbox"> Xbox
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input ml-3" type="checkbox" name="" id="" value="NintendoSwitch"> NintendoSwitch
+                    </label>
+                    <label class="form-check-label">
+                        <input class="form-check-input ml-3" type="checkbox" name="" id="" value="Mobile"> Mobile
+                    </label>
+                </div>
+            </div>
+            <!--Terceira Linha ira ter o link para a capa do jogo-->
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="capaGame">Capa do Jogo</label>
+                  <input type="url"
+                    class="form-control" name="" id="capaGame" aria-describedby="helpId" placeholder="" required>
+                  
+                </div>
+            </div>
+            <!--Quarta Linha ira ter os botoes-->
+            <div class=" form-row">
+                <div class="form-group">
+                 <button type="submit"  class="btn btn-success">Submeter</button>
+                 <button type="reset" class="btn btn-primary">Clear</button>
+                 <button id="btnFilter" type="button" class="btn btn-primary ">Filtrar por genero</button>
+                 <button id="btnRemoveAll" type="button" class="btn btn-primary ">Remover tudo</button>
+
+                </div>
+            </div>
+           <!-- Table -->
+            <div class="table-responsive">
+             <table id="tblGames" class="table table-sm">            
+             </table>
+            </div>
+        </form>
+
+         <!--Modal-->
+    <div class="modal fade" id="gameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Game Details</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h5>Nome</h5>
+                    <p id="modalGameName"></p>
+                <hr>
+                <h5>genero</h5>
+                    <p id="modalGameGenre"></p>
+                <hr>
+                <h5>Plataformas</h5>
+                    <p id="modalGamePlatforms"></p>
+                <hr>
+                <h5>Capa</h5>
+                    <img id="modalGameCover" class="img-thumbnail" src="" alt="">
+
+            </div>
+           
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+</body>
+</html>
